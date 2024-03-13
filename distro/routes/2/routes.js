@@ -4,15 +4,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const alimentos_1 = __importDefault(require("./alimentos/alimentos"));
-const users_1 = __importDefault(require("./users/users"));
+const produtos_1 = __importDefault(require("./produtos/produtos"));
+const registros_1 = __importDefault(require("./registros/registros"));
 const router = express_1.default.Router();
 router.get('/', (req, res) => {
     res.json({
-        message: `SERVIDOR REI DAS FEIRAS NO AR 👋🌎`
+        message: `SERVIDOR CLIENTE 2 👋🌎`
     });
 });
 // ROTAS
-router.use('/users', users_1.default);
-router.use('/alimentos', alimentos_1.default);
+router.use('/produtos', produtos_1.default);
+router.use('/registros', registros_1.default);
 exports.default = router;
